@@ -61,6 +61,32 @@ class DenoisingAutoencoder(nn.Module):
         x = self.decoder(x)
         return x
 ```
+```
+# Initialize model, loss function and optimizer
+model = DenoisingAutoencoder().to(device)
+criterion =nn.MSELoss()
+optimizer =optim.Adam(model.parameters(),lr=0.001)
+```
+```
+# Train the autoencoder
+def train(model, loader, criterion, optimizer, epochs=5):
+    model.train()
+    for epoch in range(epochs):
+        running_loss = 0
+        for images, _ in loader:
+            images = images.to(device)
+            noisy_images = add_noise(images).to(device)
+
+            outputs = model(noisy_images)
+            loss = criterion(outputs, images)
+
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
+
+            running_loss += loss.item()
+        print(f"Epoch [{epoch+1}/{epochs}], Loss: {running_loss/len(loader):.4f}")
+```
 
 ## OUTPUT
 
