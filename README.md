@@ -98,10 +98,11 @@ def train(model, loader, criterion, optimizer, epochs=5):
 ### Original vs Noisy Vs Reconstructed Image
 <img width="1557" height="578" alt="image" src="https://github.com/user-attachments/assets/3ded7166-0fce-4bc1-9f73-90e446cbf756" />
 
-### RESULT:
 
-The convolutional autoencoder was successfully trained to denoise MNIST digit images. The model effectively reconstructed clean images from their noisy versions, demonstrating its capability in feature extraction and noise reduction.
+
+
 
 
 
 ## RESULT
+The convolutional autoencoder was successfully trained to denoise MNIST digit images. The model effectively reconstructed clean images from their noisy versions, demonstrating its capability in feature extraction and noise reduction.
