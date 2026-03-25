@@ -105,4 +105,4 @@ def train(model, loader, criterion, optimizer, epochs=5):
 
 
 ## RESULT
-The convolutional autoencoder was successfully trained to denoise MNIST digit images. The model effectively reconstructed clean images from their noisy versions, demonstrating its capability in feature extraction and noise reduction.
+The convolutional autoencoder was successfully trained to denoise MNIST digit images.
